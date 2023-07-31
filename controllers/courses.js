@@ -93,7 +93,7 @@ const deleteCourse = asyncHandler(async(req,res,next)=>{
         return next(new ErrorResponse(`No course with id of ${req.params.id}`),404)
     }
 
-    // Not deleting the course
+    // Now deleting the course
     await course.deleteOne();
 
     res.status(200).json({
